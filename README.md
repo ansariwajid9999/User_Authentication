@@ -25,7 +25,7 @@ Use the "Validate" to validate the OTP and generate a JWT token.
 #TechStack
 
 -Java Development Kit(JDK)installed
--SpringBoo tand SpringSecurity configured
+-SpringBoot and SpringSecurity configured
 -MySQL database setup
 -SMTP email server for sending OTP emails
 
