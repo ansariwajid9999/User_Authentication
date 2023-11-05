@@ -39,23 +39,4 @@ public class JwtService {
                 .signWith(secretKey, SignatureAlgorithm.HS256)
                 .compact();
     }
-
-    public boolean validateToken(String token) {
-        try {
-            Jwts.parserBuilder().setSigningKey(secretKey).build().parseClaimsJws(token);
-            return true;
-        } catch (JwtException | IllegalArgumentException e) {
-            // Invalid token
-            return false;
-        }
-    }
-
-    public String extractUsername(String token) {
-        Claims claims = Jwts.parserBuilder()
-                .setSigningKey(secretKey)
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
-        return claims.getSubject();
-    }
 }
