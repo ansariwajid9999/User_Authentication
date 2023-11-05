@@ -10,4 +10,5 @@ public class VivatechAssignmentApplication {
 		SpringApplication.run(VivatechAssignmentApplication.class, args);
 	}
 
+
 }
